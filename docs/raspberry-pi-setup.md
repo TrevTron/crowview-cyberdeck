@@ -16,7 +16,7 @@ Quick start guide for running the CrowPanel RF dashboard on a **Raspberry Pi 5**
 | Antenna | Telescoping whip or any SMA antenna |
 
 **Optional:**
-- CrowView Note 15.6" portable monitor (for full dashboard view)
+- [CrowView Note 15.6"](https://www.elecrow.com/crowview-note-15-6-all-in-one-portable-monitor-phone-to-laptop-device.html?utm_source=Trevor&utm_medium=social&utm_campaign=ABCD&idd=5) portable monitor (for full dashboard view)
 - Active cooler for Pi 5 (recommended for sustained SDR scanning)
 
 ## Step 1: Set Up Raspberry Pi OS

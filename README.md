@@ -1,6 +1,6 @@
 # Raspberry Pi Laptop Cyberdeck — Multi-Display SDR Dashboard
 
-**Turn a Raspberry Pi 5 (or any Linux SBC) into a portable RF monitoring station with a CrowPanel 7" ESP32 HMI display and CrowView Note laptop monitor.**
+**Turn a Raspberry Pi 5 (or any Linux SBC) into a portable RF monitoring station with a [CrowPanel 7" ESP32 HMI display](https://www.elecrow.com/crowpanel-7-0-esp32-hmi-display.html) and [CrowView Note](https://www.elecrow.com/crowview-note-15-6-all-in-one-portable-monitor-phone-to-laptop-device.html?utm_source=Trevor&utm_medium=social&utm_campaign=ABCD&idd=5) laptop monitor.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -48,7 +48,7 @@ This project runs on **any Linux SBC** with USB and WiFi/Ethernet. Tested and co
 | **Compute** | **Raspberry Pi 5** (recommended) or [Indiedroid Nova](https://ameridroid.com/products/indiedroid-nova?ref=ioqothsk) (power user) |
 | **SDR** | RTL-SDR Blog V4 (USB) |
 | **Status Display** | [CrowPanel 7.0"](https://www.elecrow.com/crowpanel-7-0-esp32-hmi-display.html) — ESP32-S3, 800×480 RGB, capacitive touch |
-| **Main Display** | CrowView Note — 15.6" 1080p portable monitor (USB-C DP Alt Mode) |
+| **Main Display** | [CrowView Note](https://www.elecrow.com/crowview-note-15-6-all-in-one-portable-monitor-phone-to-laptop-device.html?utm_source=Trevor&utm_medium=social&utm_campaign=ABCD&idd=5) — 15.6" 1080p portable monitor (USB-C DP Alt Mode) |
 | **Antenna** | Telescoping whip (pictured) |
 
 Full parts list with purchase links: [hardware/parts-list.md](hardware/parts-list.md)
@@ -138,7 +138,7 @@ crowview-cyberdeck/
 
 ## Acknowledgments
 
-- **[Elecrow](https://www.elecrow.com/)** — CrowPanel 7.0" ESP32-S3 HMI display and CrowView Note portable monitor
+- **[Elecrow](https://www.elecrow.com/)** — [CrowPanel 7.0" ESP32-S3 HMI display](https://www.elecrow.com/crowpanel-7-0-esp32-hmi-display.html) and [CrowView Note portable monitor](https://www.elecrow.com/crowview-note-15-6-all-in-one-portable-monitor-phone-to-laptop-device.html?utm_source=Trevor&utm_medium=social&utm_campaign=ABCD&idd=5)
 - **[AmeriDroid](https://ameridroid.com/?ref=ioqothsk)** — Indiedroid Nova hardware partner
 
 ## License
