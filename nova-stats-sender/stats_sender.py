@@ -1,8 +1,19 @@
 #!/usr/bin/env python3
 """
-rf_bridge.py — Bridges live scanner data to CrowPanel /stats endpoint on port 8088.
-Reads from /mnt/rfdata/scans/data.json + system stats, serves JSON matching
-the format CrowPanel firmware expects.
+stats_sender.py — Bridge server for CrowPanel RF dashboard.
+
+Reads live scanner data and system metrics, serves JSON on port 8088
+in the format the CrowPanel ESP32-S3 firmware expects.
+
+COMPATIBILITY: Runs on any Linux SBC — Raspberry Pi 5/4, Indiedroid Nova,
+Jetson Nano, Orange Pi, or any ARM64/x86 machine with Python 3.11+ and psutil.
+Originally built on an Indiedroid Nova (RK3588S) but hardware-agnostic.
+
+Usage:
+    pip install psutil
+    python3 stats_sender.py
+
+The CrowPanel polls http://<your-sbc-ip>:8088/stats every 2 seconds.
 """
 
 import json
@@ -47,6 +58,9 @@ def get_uptime():
 
 
 def get_cpu_temp():
+    """Read CPU temperature. Works across SBCs — tries common sensor names
+    (soc_thermal for RK3588S/Nova, cpu_thermal for Pi, coretemp for x86)
+    and falls back to sysfs thermal_zone0."""
     try:
         temps = psutil.sensors_temperatures()
         for name in ("soc_thermal", "cpu_thermal", "coretemp"):
@@ -160,6 +174,7 @@ def main():
     port = 8088
     server = HTTPServer(("0.0.0.0", port), BridgeHandler)
     print(f"RF Bridge serving on port {port} — live scanner data → CrowPanel")
+    print(f"CrowPanel should poll http://<this-ip>:{port}/stats")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
